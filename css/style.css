@@ -1,0 +1,166 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width: 100%;
+  padding: 0 0 32px 0;
+  margin: 0;
+  clear: both;
+}
+header, main {
+  background: rgb(245, 249, 252);
+}
+main {
+  padding: 0 0 50px 0;
+}
+header div {
+  float: left;
+  width: 25%;
+}
+header div img {
+  width: 50%;
+}
+header ul {
+  width: 50%;
+  float: left;
+  padding: 0;
+  margin: 15px 0 0 0;
+  text-align: center;
+}
+header ul > li + li + li + li{
+  padding: 0;
+}
+header ul li {
+  display: inline;
+  padding: 0 6% 0 0;
+}
+button {
+  width: 21%;
+  background: rgb(48, 70, 89);
+  color: white;
+  padding: 6px;
+}
+form {
+  float: left;
+}
+input {
+  height: 35px;
+  background: rgb(225, 233, 240);
+  border: 0;
+}
+.form-button {
+  float: left;
+}
+header button {
+  width: 8%;
+  margin: 15px 2% 0 15%;
+}
+.splash {
+  float: left;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+.splashes {
+  float: left;
+  width: 50%;
+}
+.firstsplash {
+  padding: 0 8% 0 8%;
+}
+.firstsplash p {
+  float: left;
+}
+.splashes img {
+  float: right;
+  width: 100%;
+}
+.featuredfeatures {
+  float: left;
+  width: 100%;
+  padding: 0 8% 0 8%;
+}
+.feature {
+  float: left;
+  width: 25%;
+  padding: 0 3% 0 0;
+}
+.feature i {
+  font-size: 24px;
+}
+body > section {
+  clear: both;
+  padding: 50px 8% 0 8%;
+  width: 50%;
+}
+h2 {
+  font-size: 36px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media all and (min-width: 790px) {
+  header div div {
+    display: none;
+  }
+}
+/* @media Rule */
+@media all and (max-width: 790px) {
+  header div, header ul, header button, .splashes, form, input, .form-button, .feature, main > section, body > section {
+    float: none;
+    width: 100%;
+  }
+  header ul, header button {
+    display: none;
+  }
+  header div > div {
+    float: left;
+    width: 25%;
+  }
+  div > div > i {
+    width: 100%;
+    font-size: 60px;
+    padding: 0 0 0 25%;
+    margin: 25% 0 0 0;
+  }
+  header div img {
+    margin: 0 25% 0 0;
+  }
+  header nav {
+    border-bottom: 3px solid rgb(225, 233, 240);
+  }
+  form {
+    margin: 0 0 15px 0;
+  }
+  .feature {
+    padding: 0 0 20px 0;
+  }
+}
